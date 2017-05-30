@@ -1,0 +1,301 @@
+/*
+    ANIMATIONS
+*/
+@-webkit-keyframes pan {
+		0% {
+			background-position: 0px -700px;
+		}
+		50% {
+			background-position: 0px -200px;
+		}
+		100% {
+			background-position: 0px -700px;
+		}
+}
+
+@keyframes pan {
+		0% {
+			background-position: 0px -700px;
+		}
+		50% {
+			background-position: 0px -200px;
+		}
+		100% {
+			background-position: 0px -700px;
+		}
+
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.3);
+    transform: scale(.3);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  70% {
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(.3);
+    -ms-transform: scale(.3);
+    transform: scale(.3);
+  }
+
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  70% {
+    -webkit-transform: scale(.9);
+    -ms-transform: scale(.9);
+    transform: scale(.9);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+/*
+    STYLE
+*/
+.main-info {
+    max-width: 250px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(255, 255, 255, .1);
+    padding-bottom: 32px;
+}
+
+.avatar {
+    width: 128px;
+    height: 128px;
+    margin: 0 auto;
+
+    -webkit-animation-name: bounce;
+    -webkit-animation-delay: .7s;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-timing-function: ease;
+    animation-name: bounce;
+    animation-delay: .7s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+
+.avatar img {
+    width: 128px;
+    height: 128px;
+
+    border-radius: 40%;
+    border: 4px solid transparent;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, .1);
+    cursor: pointer;
+
+    transition: .1s ease;
+}
+
+.avatar img:hover {
+    box-shadow: 0 0 0 1px white;
+}
+
+hr {
+    display: block;
+    border-style: inset;
+    border-width: 1px;
+    border-color: rgba(255, 255, 255, .1);
+}
+
+h1 {
+    padding-top: 32px;
+    font-weight: 500;
+    font-size: 28px;
+    text-align: center;
+
+    -webkit-animation-name: fade;
+    -webkit-animation-delay: .0s;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-timing-function: ease;
+    animation-name: fade;
+    animation-delay: .0s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+
+h2 {
+    padding-top: 8px;    
+    font-weight: 300;
+    font-size: 14px;
+    color: rgba(192, 192, 192, 1);
+
+    text-transform: uppercase;
+    text-align: center;
+
+    -webkit-animation-name: fade;
+    -webkit-animation-delay: .5s;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-timing-function: ease;
+    animation-name: fade;
+    animation-delay: .5s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+
+#wrapper {
+    margin-top: 150px;
+    -webkit-animation-name: fade;
+    -webkit-animation-delay: .0s;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-timing-function: ease;
+    animation-name: fade;
+    animation-delay: .0s;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: -616;
+}
+
+#background-scene {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -666;
+}
+
+.bgimg {
+	width: 130%;
+	margin-left: -150px;
+	margin-top: -200px;
+}
+
+
+.links-list {
+	display: block;
+	margin: 0 auto;
+	margin-top: 32px;
+	width: 100%;
+	text-align: center;
+}
+
+.links-list li {
+    padding: 8px;
+    border-radius: 50%;
+	display: inline-block;
+    margin: 0 8px;
+	text-align: center;
+
+    transition: .1s ease;    
+    
+    -webkit-animation-name: fade;
+    -webkit-animation-delay: 1s;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-timing-function: ease;
+    animation-name: fade;
+    animation-delay: 1s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+}
+
+.links-list li:hover {
+    background-color: rgba(0,0,0,0.5);
+    
+}
+
+.links-list li img {
+    width: 24px;
+    height: 24px;
+    opacity: .5;
+    transition: .1s ease;        
+}
+
+.links-list li img:hover {
+    width: 24px;
+    height: 24px;
+    opacity: 1;
+}
+
+
+@media screen and (max-width:1200px) {
+    .bgimg {
+        width: 150%;
+        margin-left: -100px;
+        margin-top: -100px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .bgimg {
+        width: 200%;
+        margin-left: -100px;
+        margin-top: -100px;
+    }
+}
+@media screen and (max-width:400px) {
+    .bgimg {
+        width: 300%;
+        margin-left: -50px;
+        margin-top: -50px;
+    }
+}
