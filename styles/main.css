@@ -271,15 +271,13 @@ h2 {
 }
 
 .links-list li img:hover {
-    width: 24px;
-    height: 24px;
     opacity: 1;
 }
 
 
 @media screen and (max-width:1200px) {
     .bgimg {
-        width: 150%;
+        width: 180%;
         margin-left: -100px;
         margin-top: -100px;
     }
@@ -287,15 +285,66 @@ h2 {
 
 @media screen and (max-width:800px) {
     .bgimg {
-        width: 200%;
+        width: 230%;
         margin-left: -100px;
         margin-top: -100px;
     }
 }
 @media screen and (max-width:400px) {
     .bgimg {
+        width: 340%;
+        margin-left: -50px;
+        margin-top: -50px;
+    }
+}
+
+@media screen and (orientation : portrait) {
+    .bgimg {
         width: 300%;
         margin-left: -50px;
         margin-top: -50px;
+    }
+
+    .main-info {
+        max-width: 350px;
+        padding-bottom: 48px;
+    }
+
+    .avatar {
+        width: 256px;
+        height: 256px;
+    }
+
+    .avatar img {
+        width: 256px;
+        height: 256px;
+    }
+
+    h1 {
+        padding-top: 48px;
+        font-size: 64px;
+    }
+
+    h2 {
+        padding-top: 12px;    
+        font-size: 32px;
+    }
+
+    #wrapper {
+        margin-top: 250px;
+    }
+
+    .links-list {
+        margin-top: 48px;
+    }
+
+    .links-list li {
+        padding: 16px;
+        margin: 0 12px;
+    }
+
+    .links-list li img {
+        width: 54px;
+        height: 54px;     
     }
 }
