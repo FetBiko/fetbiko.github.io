@@ -1,17 +1,18 @@
-<html>
-  <head>
-    
-  </head>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-  <body>
-    <frameset>
-      <frame id="VKFollow">
-    </frameset>
-    
-    <script> 
-      var f = document.getElementById('VKFollow');
-      var link = "https://vk.com/widget_community.php?act=a_subscribe_box&oid=-148671819&state=1&widget=4";
-      f.setAttrubute('src', link);
-    </script>
-  <body>
-<html>
+    <head>
+      <title>VK Follow</title>
+    </head>
+
+
+    <body>
+        <script type="text/javascript" src="https://vk.com/js/api/openapi.js?146"></script>
+
+        <!-- VK Widget -->
+        <div id="vk_subscribe"></div>
+        <script type="text/javascript">
+        VK.Widgets.Subscribe("vk_subscribe", {mode: 2}, -53612287);
+        </script>
+    </body>
+
+</html>
