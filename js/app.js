@@ -7,7 +7,7 @@ var vm = new Vue({
             }
         },
         personal: {
-            avatar: "./img/avatar.jpeg",
+            avatar: "./img/avatar.png",
             name: "FetBiko",
             status: "Designer / Coder",
             links: [
