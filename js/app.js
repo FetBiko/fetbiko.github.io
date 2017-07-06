@@ -1,6 +1,11 @@
 var vm = new Vue({
     el: "#container",
     data: {
+        methods: {
+            isPortrait: function() {
+                
+            }
+        },
         personal: {
             avatar: "./img/avatar.jpeg",
             name: "FetBiko",
@@ -30,15 +35,12 @@ var vm = new Vue({
                     title: "Dishots",
                     url: "https://dishots.com/u/fetbiko",
                     icon: "./img/icons/dishots.png"
-                },
+                }
             ]
         },
         web: {
-            background: "./img/background.jpg"
+            background: "./img/bg/landscape.jpg"
         }
-    },
-    methods: {
-        
     },
     created: function() {
         console.info("Site initialized!");
