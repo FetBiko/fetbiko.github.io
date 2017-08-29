@@ -1,0 +1,211 @@
+<html>
+    <head>
+        <title>Time Stamp — сгенерировать пост.</title>
+
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Lato:100,300,400);
+
+            input[type=time], input[type=time]::-webkit-inner-spin-button, 
+            input[type=time]::-webkit-outer-spin-button {
+                overflow: hidden;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                margin: 0; 
+            }
+
+            body {
+                font-family: 'Lato', Roboto, Arial, Helvetica, sans-serif;
+                color: gray;
+            }
+
+            header {
+                position: relative;
+                margin: 100px 0 25px 0;
+                font-size: 24px;
+                color: #4d4d4d;
+                text-align: center;
+                letter-spacing: 7px;
+            }
+
+            .container {
+                width: 430px;
+                margin: auto;
+                padding: 8px 20px;
+                margin-top: 64px;
+                border: solid 1px #e4e4e7;
+            }
+            h4 {
+                letter-spacing: 2px;
+                color: #4d4d4d;
+                
+            }
+            #generated {
+                position: relative;
+                /*padding: 16px 8px;*/
+                font-size: 16px;
+                /*text-align: center;*/
+            }
+
+            #form {
+                position: relative;
+                width: 470px;
+                margin: 48px auto 32px auto;
+            }
+
+            input {
+                font-size: 14px;
+
+                width: 470px;
+                height: 40px;
+
+                padding: 0px 14px 0px 14px;
+                
+                background: transparent;
+                outline: none;
+  
+                border: solid 1px #e4e4e7;
+                border-bottom: none;
+                
+                transition: all 0.3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+            }
+
+            /*input:hover {
+                background: #e4e4e7;
+                color: #e2dedb;
+            }*/
+            #msg {
+                position: fixed;
+                left: 0;
+                padding: 4px 8px;
+                color: white;
+                background: black;
+
+               transition: all 0.3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+            }
+
+            textarea {
+                width: 470px;
+                max-width: 470px;
+
+                height: 110px;
+                max-height: 110px;
+
+                padding: 15px;
+                
+                background: transparent;
+                outline: none;
+
+                font-family: 'Lato', sans-serif;
+                font-size: 0.875em;
+                
+                border: solid 1px #e4e4e7;
+                
+                transition: all 0.3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
+                -ms-transition: all 0.3s ease-in-out;
+            }
+            [disabled=true] {
+                display: none;
+            }
+
+            #submit {
+                font-size: 14px;
+                outline:none;
+                cursor: pointer;
+                color: #4d4d4d;
+                letter-spacing: 2px;
+                border-bottom: solid 1px #e4e4e7;
+                border-top: none;
+            }
+
+            #submit:hover {
+                background: #e4e4e7;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="msg" disabled=true>Введи автора!</div>
+
+        <header>TIME STAMP POST</header>
+
+        <form id="form" class="topBefore">
+            <input id="author" type="text" placeholder="AUTHOR">
+            <input id="time" type="time" placeholder="STAMP">
+            <textarea id="lyrics" type="text" placeholder="LYRICS"></textarea>
+            <input id="submit" type="button" value="GENERATE">
+        </form>
+
+        <div id="hideMe" class="container">
+            <h4>POST</h4>
+            <p id="generated">Lorem ipsum dolor sit.</p>
+        </div>
+
+        <script>
+            var el = document.getElementById("msg");
+
+            function showMsg(text, seconds) {
+                if (text) {
+                    console.log("SHOW!");
+                    el.setAttribute("disabled", false);
+                    el.innerHTML = text;
+
+                    if (seconds) {
+                        setTimeout(function() {
+                            console.log("Hide!");
+                            el.setAttribute("disabled", true);
+                        }, seconds * 1000);
+                    } else {
+                        setTimeout(hideMsg(), 3000);
+                    }
+                }
+            }
+
+            function hideMsg() {
+                    
+            }
+
+            var generated = document.getElementById("generated");
+            var submit = document.getElementById("submit");
+            var hideMe = document.getElementById("hideMe");
+            
+            var author = document.getElementById("author");
+            var time = document.getElementById("time");
+            var lyrics = document.getElementById("lyrics");
+
+            hideMe.setAttribute("disabled", true);
+
+            submit.onclick = function() {
+                console.log("start..");
+
+                if(author.value.length == 0){
+                    showMsg("Введи автора!", 2);
+                    return;
+                }
+                if(time.value.length == 0){
+                    showMsg("Введи время!", 2);
+                    return;
+                }
+                if(lyrics.value.length < 5){
+                    showMsg("Неправильный текст!", 2);
+                    return;
+                }
+
+                var text = "@club53612287 (Time Stamp — " + time.value + "). #" + author.value + "\n\n\
+\
+/ " + lyrics.value + " /"
+
+                generated.innerText = text;
+
+                hideMe.setAttribute("disabled", false);
+            }
+        </script>
+   </body>
+</html>
