@@ -14,32 +14,32 @@ var vm = new Vue({
                 {
                     title: "VKontakte",
                     url: "https://vk.com/fetbiko",
-                    icon: "./img/icons/vk.png"
+                    icon: "/img/icons/vk.png"
                 },
                 {
                     title: "Twitter",
                     url: "https://twitter.com/fetbiko",
-                    icon: "./img/icons/twitter.png"
+                    icon: "/img/icons/twitter.png"
                 },
                 {
                     title: "Instagram",
                     url: "https://instagram.com/fetbiko",
-                    icon: "./img/icons/instagram.png"
+                    icon: "/img/icons/instagram.png"
                 },
                 {
                     title: "Telegram",
                     url: "https://t.me/fetbiko",
-                    icon: "./img/icons/telegram.png"
+                    icon: "/img/icons/telegram.png"
                 },
                 {
                     title: "Dishots",
                     url: "https://dishots.com/u/fetbiko",
-                    icon: "./img/icons/dishots.png"
+                    icon: "/img/icons/dishots.png"
                 }
             ]
         },
         web: {
-            background: "./img/bg/landscape.jpg"
+            background: "/img/bg/landscape.jpg"
         }
     },
     created: function() {
