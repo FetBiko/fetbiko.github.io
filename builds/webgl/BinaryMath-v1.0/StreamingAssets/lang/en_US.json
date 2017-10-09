@@ -1,0 +1,46 @@
+{ // Language
+  "info": {
+    "name": "English",
+    "code": "en",
+    "version": 0
+  },
+  "values": {
+    "record":           "RECORD",
+    "play":             "Play Now!",
+    "menu":             "Menu",
+    "settings":         "Settings",
+    "shop":             "Market",
+    "achievements":     "Achievements",
+    "htp":              "How To Play",
+    "gameOver":         "Game Over",
+    "restart":          "Restart!",
+    "sound":            "Sound",
+    "music":            "Music",
+    "removeAds":        "Remove Ads",    
+    "lang":             "Language",
+    "feedback":         "Feedback",
+    "send":             "Send",
+    "pause":            "Pause",
+    "continue":         "Continue",
+    "closeGame":        "Stop The Game",
+    "menuAskContent":   "Вы уверены, что хотите завершить игру?",
+    "requiredMoney":    "REQUIRED ENERGY",
+
+    
+    "watchVideo": "WATCH VIDEO",
+    "freeLife": "EXTEND GAME",
+    "maybeLater": "NOT NOW",
+
+    "additiveTutorialHeader": "HTP: ADDITION",
+    "additiveTutorialDescription-1": "В двоичной системе счисления действуют те же законы, что и в десятичной.",
+
+    "subtractionTutorialHeader": "HTP: SUBTRACTION",    
+    "subtractionTutorialDescription-1": "Если не хватает, единица занимается в старшем разряде.",
+
+    "developers": "Developers",
+    "developersList": "Daniil Fetisov\nOleg Grishakov\nMaxim Lyashenko",
+
+    "okay": "Okay"
+
+  }
+}

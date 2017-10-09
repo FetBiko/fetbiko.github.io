@@ -1,0 +1,44 @@
+{ // Language
+  "info": {
+    "name": "Русский",
+    "code": "ru",
+    "version": 0
+  },
+  "values": {
+    "record": "РЕКОРД",
+    "play": "Играть!",
+    "menu": "Меню",
+    "settings": "Настройки",
+    "shop": "Магазин",
+    "achievements": "Достижения",
+    "htp": "Как Играть",
+    "gameOver": "Игра Окончена",
+    "restart": "Заново!",
+    "sound": "Звуки",
+    "music": "Музыка",
+    "removeAds": "Отключить рекламу",
+    "lang": "Язык",
+    "feedback": "Письмо разработчикам",
+    "send": "Отправить",
+    "pause": "Пауза",
+    "continue": "Продолжить",
+    "closeGame": "Завершить игру",
+    "menuAskContent": "Вы уверены, что хотите завершить игру?",
+    "requiredMoney": "ДОСТУПНО ЭНЕРГИИ",
+
+    "watchVideo": "СМОТРЕТЬ ВИДЕО",
+    "freeLife": "ВОССТАНОВИТЬ ИГРУ",
+    "maybeLater": "НЕ СЕЙЧАС",
+
+    "additiveTutorialHeader": "КАК ИГРАТЬ: СЛОЖЕНИЕ",
+    "additiveTutorialDescription-1": "В двоичной системе счисления действуют те же законы, что и в десятичной.",
+
+    "subtractionTutorialHeader": "КАК ИГРАТЬ: ВЫЧИТАНИЕ",    
+    "subtractionTutorialDescription-1": "Если не хватает, единица занимается в старшем разряде.",
+
+    "developers": "Разработчики",
+    "developersList": "Даниил Фетисов\nОлег Гришаков\nМаксим Ляшенко",
+
+    "okay": "Понял"
+  }
+}
