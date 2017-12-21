@@ -1,1 +1,58 @@
+<!doctype HTML>
+<html>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+    <title>Визитка</title>
+
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <h1>Визитка</h1>
+    </div>
+
+    <div class="page">
+
+        <section id="page-install">
+
+            <p>Приложение <b>Визитка</b> помогает собрать важную контактную информацию об авторе или организации в одном месте.</p>
+            <a href="#" id="btn-include-app" target="_blank" class="btn btn-vk-ui">Подключить приложение</a>
+        
+        </section>
+
+        <section id="page-start" style="display:none;">
+            <h2 class="text-center">Шаг 1</h2>
+            <p>Для начала нужно дать приложению доступ к Вашим фотографиям.</p>
+            <div class="text-center">
+                <a href="#" id="btn-get-access" class="btn btn-vk-ui" style="display: none;">Открыть доступ</a>
+            </div>
+        </section>
+        <section id="page-pick-photo" style="display:none;">
+            <h2 class="text-center">Шаг 2</h2>
+            <p>Выберите фотографию</p>
+            <div id="container-photos"></div>
+        </section>
+        <section id="page-enter-text" style="display:none;">
+            <h2 class="text-center">Шаг 3</h2>
+            <p>Введите описание</p>
+            <textarea id="textarea-post-description" class="textarea-description"
+                    placeholder="Начните вводить описание"></textarea>
+
+            <div class="text-center">
+                <a href="#" id="btn-back-to-photos" class="btn">Назад</a>
+                <a href="#" id="btn-submit" class="btn btn-vk-ui">Отправить</a>
+            </div>
+        </section>
+    </div>
+</body>
+
+<!-- <script src="https://vk.com/js/api/xd_connection.js?2" type="text/javascript"></script> -->
+<!-- <script src="app.js" type="text/javascript"></script> -->
+
+</html>
