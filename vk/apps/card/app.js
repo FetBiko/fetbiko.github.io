@@ -9,7 +9,7 @@ var app = {
         ENTER_DESCRIPTION: document.getElementById('page-enter-text')
     },
 
-    appId: 6306700,
+    appId: 0,
     groupId: 0,
 
     show: function (page) {
@@ -39,8 +39,9 @@ var app = {
                     function getAccess(event) {
                         event.preventDefault();
 
-                        VK.callMethod('showSettingsBox', app.API_SETTINGS_SCOPE_PHOTOS);
-                        VK.addCallback('onSettingsChanged', onSuccess);
+                        VK.callMethod( 'showSettingsBox',
+                            app.API_SETTINGS_SCOPE_PHOTOS + 128 );
+                        VK.addCallback( 'onSettingsChanged', onSuccess );
 
                         function onSuccess() {
                             VK.removeCallback('onSettingsChanged', onSuccess);
