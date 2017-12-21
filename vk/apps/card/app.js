@@ -9,7 +9,7 @@ var app = {
         ENTER_DESCRIPTION: document.getElementById('page-enter-text')
     },
 
-    appId: 0,
+    appId: 6306700,
     groupId: 0,
 
     show: function (page) {
