@@ -42,20 +42,18 @@ var app = {
 
             if( app.userPermissions == 4 ) {
                 
-                document.getElementById( 'btn-create-wiki' ).onclick = function() {
+                document.getElementById( 'btn-db-save' ).onclick = app.database.save;
+                documnet.getElementById( 'btn-db-random' ).onclick = function() { 
+            
+                    app.database.data[ 'automatically-' + Date.now() ] = Math.random * 1000;
+                }
+            
+                documnet.getElementById( 'btn-db-random' ).onclick = function() { 
                     
-                    var requestData = {
-                        'text': 'sample text!',
-                        'group_id': app.groupId,
-                        'user_id': app.userId,
-                        'title': "title",
-                        'access_token': app.urlItem('access_token')
-                    };
-    
-                    VK.api('pages.save', requestData);
-                };
+                    app.database.data[ 'automatically-' + Date.now() ] = Date.now();
+                }
             } 
-        } );
+        });
     },
 
     initializeUI: function() {
@@ -67,16 +65,7 @@ var app = {
 window.addEventListener('load', function () {
     app.initialize();
 
-    document.getElementById( 'btn-db-save' ).onclick = app.database.save;
-    documnet.getElementById( 'btn-db-random' ).onclick = function() { 
-
-        app.database.data[ 'automatically-' + Date.now() ] = Math.random * 1000;
-    }
-
-    documnet.getElementById( 'btn-db-random' ).onclick = function() { 
-        
-        app.database.data[ 'automatically-' + Date.now() ] = Date.now();
-    }
+    
 });
 
 
