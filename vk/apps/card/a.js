@@ -1,13 +1,9 @@
 var app = {
+
     API_VERSION: '5.69',
-    API_SETTINGS_SCOPE_PHOTOS: 4 + 128,
+    API_SCOPES: 128,
 
-    appId: 0,
-    groupId: 0,
-    userId: 0,
-    userPermissions: 0,
-
-    getUrlParameter: function ( name ) {
+    urlItem: function ( name ) {
         name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
 
         var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
@@ -16,21 +12,34 @@ var app = {
         return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
     },
 
-    init: function () {
-        app.appId = app.getUrlParameter('api_id');
-        app.groupId = app.getUrlParameter('group_id');
-        app.userId = app.getUrlParameter('viewer_id');
-        app.userPermissions = app.getUrlParameter('viewer_type');
+    initialize: function () {
 
- /*       document.getElementById('btn-include')
-                .href = 'https://vk.com/add_community_app?aid=' + app.appId; */
+        app.info = {
+            app_id:         app.urlItem( 'api_id' ),
+            group_id:       app.urlItem( 'group_id' ),
+            viewer_id:      app.urlItem( 'viewer_id' ),
+            viewer_type:    app.urlItem( 'viewer_type' ),
+            access_token:   app.urlItem( 'access_token' )
+        }
+
+        app.initializeVK();
+        app.initializeDatabase();
+        app.initializeUI();        
+    },
+
+    initializeDatabase: function() {
+
+        app.database = new WikiDatabase( {}, app.info);
+    },
+
+    initializeVK: function() {
 
         VK.init(null, null, app.API_VERSION);
-
-        VK.callMethod( 'showSettingsBox',
-            app.API_SETTINGS_SCOPE_PHOTOS );
+        
+        VK.callMethod( 'showSettingsBox', app.API_SCOPES );
         
         VK.addCallback( 'onSettingsChanged', function() {
+
             if( app.userPermissions == 4 ) {
                 
                 document.getElementById( 'btn-create-wiki' ).onclick = function() {
@@ -39,33 +48,33 @@ var app = {
                         'text': 'sample text!',
                         'group_id': app.groupId,
                         'user_id': app.userId,
-                        'page_id': 616,
                         'title': "title",
-                        'access_token': app.getUrlParameter('access_token')
+                        'access_token': app.urlItem('access_token')
                     };
     
                     VK.api('pages.save', requestData);
                 };
             } 
         } );
-       
     },
 
-    test() {
-        var requestData = {
-            'text': 'sample text!',
-            'group_id': group_id,
-            'user_id': user_id,
-            'title': title
-        };
+    initializeUI: function() {
 
+        document.getElementById( 'btn-db-save' ).onclick = app.database.save;
+        documnet.getElementById( 'btn-db-random' ).onclick = function() { 
 
-        VK.api('pages.save', requestData);
+            app.database.data[ 'automatically-' + Date.now() ] = Math.random * 1000;
+        }
+
+        documnet.getElementById( 'btn-db-random' ).onclick = function() { 
+            
+            app.database.data[ 'automatically-' + Date.now() ] = Date.now();
+        }
     }
 };
 
 window.addEventListener('load', function () {
-    app.init();
+    app.initialize();
 });
 
 
@@ -79,7 +88,6 @@ pages:
 */
 
 /*
-
 api_id=6306700
 api_settings=1
 viewer_id=154843561
