@@ -39,6 +39,7 @@ var app = {
                         'text': 'sample text!',
                         'group_id': app.groupId,
                         'user_id': app.userId,
+                        'page_id': 616,
                         'title': "title",
                         'access_token': app.getUrlParameter('access_token')
                     };
