@@ -37,7 +37,7 @@ var app = {
         app.initializeDatabase();
 
         // if application not installed.
-        app.go( false ? 'page-install' : 'page-profile' );
+        app.ui.go( false ? 'page-install' : 'page-profile' );
     },
 
     initializeUI: function() {
