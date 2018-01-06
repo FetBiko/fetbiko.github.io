@@ -287,40 +287,6 @@ h2 {
     }
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 2),
-       screen and (   -moz-min-device-pixel-ratio: 2),
-       screen and (     -o-min-device-pixel-ratio: 2),
-       screen and (        min-device-pixel-ratio: 2)
-{
-    hr {
-        margin: 48px 0;
-    }
-
-    h1 {
-        padding-top: 64px;
-        font-size: 48px;
-    }
-
-    h2 {
-        padding-top: 16px;    
-        font-size: 28px;
-    }
-
-    .links-list {
-        margin-top: 48px;
-    }
-
-    .links-list li {
-        padding: 16px;
-        margin: 0 16px;
-    }
-
-    .links-list li img {
-        width: 48px;
-        height: 48px;      
-    }
-}
-
 flashcard-message {
 	color: white;
 }
